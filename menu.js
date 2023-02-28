@@ -103,7 +103,7 @@ console.log(category);
 let foodArr = [
     {
         name: 'Pepperoni',
-        price: 5,
+        price: 4,
         category: 'Meat',
         popularity: 1,
         rating: 5,
@@ -135,7 +135,7 @@ let foodArr = [
     },
     {
         name: 'Dessert Pizza',
-        price: 5,
+        price: 3,
         category: 'Dessert',
         popularity: 4,
         rating: 3,
@@ -206,11 +206,14 @@ console.log(filteredFood);
 
 //CODE HERE
 const filterByProperty = (property,number,type)=>{
-    let filter = foodArr.filter((element)=>{
-        if (type === ) {
-            
+    let filter = foodArr.filter((food)=>{
+        if (type === 'above') {
+            return food[property] > number
+        }else{
+            return food[property] < number
         }
     })
+    return filter
 }
 
 /*
@@ -221,4 +224,4 @@ const filterByProperty = (property,number,type)=>{
 */
 
 //CODE HERE
-console.log(filterByProperty(price,4,'above'));
+console.log(filterByProperty('price',4,'above'));
